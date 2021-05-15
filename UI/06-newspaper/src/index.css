@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+/*classic quote*/
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
+/*classic title*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/*classic*/
+
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+/*monospace*/
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+/*monospace quote*/
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+/*handwriting*/
+@import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
+/*handwriting quote*/
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+/*magic quote*/
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap'); /*magic*/
+
+:root {
+  --black-color-text: #002137;
+  --gold-color: #ebd653;
+}
+
+.newspaper {
+  width: 1200px;
+  background-color: #e5dac3;
+  margin: 0 auto;
+  padding: 0 10px 10px 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  text-transform: uppercase;
+  padding: 20px 0 5px 0;
+  margin: 0 auto;
+}
+
+.logoHeader {
+  width: 185px;
+}
+
+.titleWithFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border-bottom: 5px double black;
+  border-top: 5px double black;
+  height: 145px;
+  margin-bottom: 5px;
+}
+
+.titleWithFooter .title {
+  font-size: 100px;
+  margin: 0;
+}
+
+.prophetLetter {
+  color: var(--gold-color);
+  text-shadow: black 0 0 2px;
+}
+
+.titleWithFooter .footer {
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+}
+
+.shortInfo {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nameButtons,
+.listButtons {
+  margin: 0;
+}
+
+.nameWithButtons {
+  display: flex;
+  justify-content: center;
+}
+
+.listButtons {
+  padding-left: 10px;
+  list-style-type: none;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.nameButtons {
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  font-size: 18px;
+}
+
+.radioButton {
+  display: none;
+}
+
+.labelColor,
+.labelSize,
+.labelFont {
+  cursor: pointer;
+}
+
+/*color*/
+.colorWhite:checked ~ .newspaper {
+  background-color: white;
+  border: 5px double black;
+}
+
+.colorBlack:checked ~ .newspaper {
+  background-color: black;
+  color: white;
+}
+
+.colorBlack:checked ~ .newspaper .titleWithFooter,
+.colorBlack:checked ~ .newspaper .text,
+.colorBlack:checked ~ .newspaper .purpose,
+.colorMagic:checked ~ .newspaper .titleWithFooter,
+.colorMagic:checked ~ .newspaper .text,
+.colorMagic:checked ~ .newspaper .purpose {
+  border-color: white;
+}
+
+.colorMagic:checked ~ .newspaper {
+  background-color: darkviolet;
+  color: white;
+}
+
+/*end color*/
+
+/*size*/
+.sizeSmall:checked ~ .newspaper .text {
+  font-size: 15px;
+}
+
+.sizeBig:checked ~ .newspaper .text {
+  font-size: 23px;
+}
+
+.sizeLarge:checked ~ .newspaper .text {
+  font-size: 25px;
+}
+
+.sizeBig:checked ~ .newspaper {
+  width: 1500px;
+}
+
+.sizeLarge:checked ~ .newspaper {
+  width: 1700px;
+}
+
+/*end size*/
+
+/*handwriting*/
+.fontHandwriting:checked ~ .newspaper .text,
+.fontHandwriting:checked ~ .newspaper .titlePost,
+.fontHandwriting:checked ~ .newspaper .headerArticle,
+.fontHandwriting:checked ~ .newspaper .purpose:first-letter,
+.fontHandwriting:checked ~ .newspaper .begin:first-letter {
+  font-family: "Caveat", cursive;
+}
+
+.fontHandwriting:checked ~ .newspaper .quote {
+  font-family: 'Syne Tactile', cursive;
+}
+
+/*end handwriting*/
+
+/*monospace*/
+.fontMonospace:checked ~ .newspaper .text,
+.fontMonospace:checked ~ .newspaper .titlePost,
+.fontMonospace:checked ~ .newspaper .headerArticle,
+.fontMonospace:checked ~ .newspaper .purpose:first-letter,
+.fontMonospace:checked ~ .newspaper .begin:first-letter {
+  font-family: 'Syne Mono', monospace;
+}
+
+.fontMonospace:checked ~ .newspaper .quote {
+  font-family: 'Nova Mono', monospace;
+}
+
+/*end monospace*/
+
+/*magic*/
+.fontMagic:checked ~ .newspaper .text,
+.fontMagic:checked ~ .newspaper .titlePost,
+.fontMagic:checked ~ .newspaper .headerArticle,
+.fontMagic:checked ~ .newspaper .purpose:first-letter,
+.fontMagic:checked ~ .newspaper .begin:first-letter {
+  font-family: 'Major Mono Display', monospace;
+}
+
+.fontMagic:checked ~ .newspaper .quote {
+  font-family: 'VT323', monospace;
+}
+
+/*end magic*/
+
+.colorWhite:checked ~ .newspaper .labelWhite,
+.colorBlack:checked ~ .newspaper .labelBlack,
+.colorRetro:checked ~ .newspaper .labelRetro,
+.colorMagic:checked ~ .newspaper .labelMagic,
+.fontMagic:checked ~ .newspaper .labelMagicFont,
+.fontMonospace:checked ~ .newspaper .labelMonospace,
+.fontClassic:checked ~ .newspaper .labelClassic,
+.fontHandwriting:checked ~ .newspaper .labelHandwriting,
+.sizeSmall:checked ~ .newspaper .labelSmall,
+.sizeBig:checked ~ .newspaper .labelBig,
+.sizeLarge:checked ~ .newspaper .labelLarge,
+.sizeNormal:checked ~ .newspaper .labelNormal {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.text {
+  border: 2px solid black;
+  padding: 5px 10px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas: "header header header"
+                 "column1 column2 column3";
+  font-size: 20px;
+  grid-gap: 20px;
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+}
+
+.titlePost {
+  column-span: all;
+  font-size: 3.96em;
+  margin: 0;
+  text-align: justify;
+  font-family: "Arvo", serif;
+  text-transform: uppercase;
+  grid-area: header;
+}
+
+.column1 {
+  grid-area: column1;
+}
+
+.column2 {
+  grid-area: column2;
+}
+
+.quote {
+  font-weight: bold;
+  font-size: 1.05em;
+  /**font-family: "Dancing Script", cursive;*/
+  font-family: "Shadows Into Light", cursive;
+}
+
+.quoteFooter {
+  text-align: right;
+}
+
+.purpose {
+  padding-bottom: 5px;
+  border-bottom: 5px double black;
+}
+
+.purpose:first-letter,
+.begin:first-letter {
+  font-size: 2em;
+  font-family: "Arvo", serif;
+  text-shadow: black 0 0 2px;
+}
+
+.plot {
+  column-count: 2;
+}
+
+.headerArticle {
+  column-span: all;
+  font-size: 2em;
+  font-family: "Arvo", serif;
+  margin: 0;
+}
+
+.plotHeader {
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  text-transform: uppercase;
+  text-align: right;
+  letter-spacing: 0.4em;
+}
+
+.plot p {
+  margin: 0;
+}
+
+.photoHarry {
+  column-span: all;
+  margin: 10px 0;
+}
+
+.footerHarry {
+  text-align: right;
+  font-weight: bold;
+}
+
+.wrapPlot {
+  column-span: all;
+  display: flex;
+}
+
+.begin {
+  margin: 0;
+}
+
+.plotTwoColumns {
+  column-count: 2;
+}
+
+.photoHarry {
+  text-align: center;
+}

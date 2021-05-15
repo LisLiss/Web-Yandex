@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MurBooooo</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<input class="radioButton radioButton1" type="radio" id="radio1" name="joke" checked/>
+<input class="radioButton radioButton2" type="radio" id="radio2" name="joke" />
+<input class="radioButton radioButton3" type="radio" id="radio3" name="joke" />
+<input class="checkButton" type="checkbox" id="check" />
+<div class="wrapper-background"></div>
+<article class="card-form">
+  <section class="text-part">
+    <h2 class="text-part__header">Подготовь кота к Хэллоуину! &#127875;</h2>
+    <p class="text-part__info">Эта рассылка не гарантирует конфеты, но ты все равно подпишись. Просто
+      обрадуй котиков!</p>
+  </section>
+  <!-- div-s  as wrappers -->
+  <div class="color color-top"></div>
+  <div class="color color-bottom"></div>
+  <form class="form-buttons">
+    <div class="choice">
+      <div class="buttons-info">
+        <label class="buttons-info__costume" for="costume1">Я в костюме </label>
+        <input class="buttons-info__costumeButton" type="text" id="costume1" placeholder="котика">
+        <label class="buttons-info__candy" for="candy1">и хочу</label>
+        <input class="buttons-info__candyButton" type="number" id="candy1" step="1" value="1" min="0" placeholder="0">
+        <label class="buttons-info__candy" for="candy1">кг конфет</label>
+      </div>
+      <div class="buttons-radio">
+        <label class="buttons-radio__label radio1" for="radio1">Trick</label>
+        <label class="buttons-radio__label radio2" for="radio2">or</label>
+        <label class="buttons-radio__label radio3" for="radio3">Treat</label>
+      </div>
+      <div class="buttons-email">
+        <input class="buttons-email__input" type="email" placeholder="Введи email кота" required />
+      </div>
+      <div class="buttons-checkbox">
+        <label class="darkSide" for="check">Перейти на темную сторону</label>
+      </div>
+    </div>
+    <div class="form-buttons__submit">
+      <button class="submitButton" type="submit"> Подписаться!</button>
+    </div>
+  </form>
+  <img class="imgCat imgCat1" src="resource/trick.jpg" alt="trick Cat">
+  <img class="imgCat imgCat2" src="resource/or.jpg" alt="or Cat">
+  <img class="imgCat imgCat3" src="resource/treat.jpg" alt="treat Cat">
+</article>
+</body>
+</html>

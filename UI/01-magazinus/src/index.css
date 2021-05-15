@@ -1,0 +1,129 @@
+:root{
+  --black-color-text: #002137;
+}
+
+header {
+  font-weight: bold;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Arial", fantasy;
+  color: var(--black-color-text);
+}
+
+.buttonCat{
+  display: none;
+}
+.switchLabel{
+  margin-left: 1rem;
+  font-size: 1.8rem;
+  display: inline-block;
+}
+
+.switchLabel:hover{
+  cursor: pointer;
+}
+
+.buttonCat:checked + .switchLabel{
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+}
+
+.boxCat {
+  border: 2px solid lightgrey;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 2rem 0 2rem 3rem;
+  width: 380px;
+}
+
+.boxCat:hover{
+  box-shadow: 0 0 10px #236c7a;
+}
+
+.imgCat {
+  width: 380px;
+  height: 380px;
+  -moz-transition: all 0.8s ease-out;
+  -o-transition: all 0.8s ease-out;
+  -webkit-transition: all 0.8s ease-out;
+}
+
+.imgCat:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.buttonCat:not(:checked) ~ div .boxCat .boxImgCat {
+  width: 380px;
+  height: 380px;
+  overflow: hidden;
+  margin-bottom: 0.7rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.buttonCat:checked ~ div .boxCat .boxImgCat {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  margin-bottom: 0.7rem;
+}
+
+.buttonCat:checked ~ div .boxCat .imgCat {
+  width: 500px;
+  height: 500px;
+}
+.divNameCat {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nameCat {
+  text-decoration: none;
+  color: #4a443d;
+  font-size: 1.8rem;
+  padding-left: 0.7rem;
+  padding-bottom: 0;
+  font-family: "Arial", fantasy;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nameCat:hover {
+  color: #236c7a;
+}
+
+.infoCat, .fullInfoCat {
+  color: gray;
+  font-size: 1.2rem;
+  padding-left: 1.1rem;
+  margin-top: 0.5rem;
+}
+.infoCat:hover, .fullInfoCat:hover{
+  color: #4a443d;
+  cursor: default;
+}
+
+.buttonCat:not(:checked) ~ div .boxCat .fullInfoCat{
+  display: none;
+}
+
+.buttonCat:checked ~ div .boxCat .fullInfoCat{
+  padding-left: 0.3rem;
+}
+
+.buttonCat:checked ~ div .boxCat{
+  display: block;
+  padding: 2rem;
+  width: 700px;
+}
+
+.buttonCat:checked ~ div .boxCat .infoCat{
+  display: none;
+}
+
+.buttonCat:checked ~ div .nameCat{
+  padding-left: 0;
+}

@@ -1,0 +1,339 @@
+:root {
+    --greyish-brown: #444444;
+}
+
+.hidden {
+    width: 0;
+    height: 0;
+}
+
+.Catogram-Default {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    border: 1px solid grey;
+}
+
+.input,
+.label-rotate,
+.label-scale,
+.label-right-arrow,
+.label-arrow,
+.filter {
+    display: none;
+}
+
+.input_rotate0:checked ~ .Catogram-Default .label-rotate1,
+.input_rotate1:checked ~ .Catogram-Default .label-rotate2,
+.input_rotate2:checked ~ .Catogram-Default .label-rotate3,
+.input_rotate3:checked ~ .Catogram-Default .label-rotate0,
+.input_scale0:checked ~ .Catogram-Default .label-scale1,
+.input_scale1:checked ~ .Catogram-Default .label-scale2,
+.input_scale2:checked ~ .Catogram-Default .label-scale3,
+.input_scale3:checked ~ .Catogram-Default .label-scale0 {
+    display: block;
+}
+
+.icon {
+    width: 49px;
+    height: 49px;
+}
+
+.icon-logo {
+    object-fit: contain;
+    position: absolute;
+    left: 695px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.icon-scale,
+.icon-rotate,
+.icon-fill,
+.icon-flip {
+    fill: var(--greyish-brown);
+    position: absolute;
+    opacity: 0.8;
+    top: 20px;
+    cursor: pointer;
+}
+
+.icon-scale {
+    left: 549px;
+}
+
+.icon-fill {
+    left: 402px;
+}
+
+.icon-rotate {
+    left: 842px;
+}
+
+.icon-flip {
+    left: 988px;
+    top: 20px;
+}
+
+.image-wrapper-scale,
+.image-wrapper-rotate {
+    width: 632px;
+    height: 632px;
+    transition: transform;
+    transition-duration: 0.2s;
+}
+
+.image-wrapper-scale {
+    transition-duration: 1s;
+}
+
+.image-wrapper-rotate {
+    position: absolute;
+    top: 80px;
+    left: 404px;
+    overflow: hidden;
+}
+
+.image-cat {
+    width: 632px;
+    height: 632px;
+    object-fit: cover;
+    transition: filter, transform;
+    transition-duration: 1s, 0.2s;
+}
+
+.filters {
+    position: relative;
+    left: 373px;
+    top: 780px;
+    width: 695px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter {
+    width: 170px;
+    cursor: pointer;
+}
+
+.icon-arrow-left,
+.icon-arrow-right {
+    fill: var(--greyish-brown);
+    opacity: 0.8;
+}
+
+.icon-arrow-left {
+    transform: rotate(90deg);
+}
+
+.icon-arrow-right {
+    transform: rotate(-90deg);
+}
+
+.preview-cat {
+    width: 170px;
+    height: 170px;
+}
+
+.name-filter {
+    width: 170px;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-family: Helvetica, serif;
+    margin: 0 0 15px;
+}
+
+
+.input_arrow1:checked ~ .Catogram-Default .label-arrow0,
+.input_arrow2:checked ~ .Catogram-Default .label-arrow1,
+.input_arrow3:checked ~ .Catogram-Default .label-arrow2,
+.input_arrow4:checked ~ .Catogram-Default .label-arrow3,
+.input_arrow1:checked ~ .Catogram-Default .label-right-arrow2,
+.input_arrow2:checked ~ .Catogram-Default .label-right-arrow3,
+.input_arrow3:checked ~ .Catogram-Default .label-right-arrow4,
+.input_arrow4:checked ~ .Catogram-Default .label-right-arrow0,
+.input_arrow1:checked ~ .Catogram-Default .visible1,
+.input_arrow2:checked ~ .Catogram-Default .visible2,
+.input_arrow3:checked ~ .Catogram-Default .visible3,
+.input_arrow4:checked ~ .Catogram-Default .visible4 {
+    display: block;
+}
+
+.input_filter1:checked ~ .Catogram-Default .filter1 .name-filter,
+.input_filter2:checked ~ .Catogram-Default .filter2 .name-filter,
+.input_filter3:checked ~ .Catogram-Default .filter3 .name-filter,
+.input_filter4:checked ~ .Catogram-Default .filter4 .name-filter,
+.input_filter5:checked ~ .Catogram-Default .filter5 .name-filter,
+.input_filter6:checked ~ .Catogram-Default .filter6 .name-filter,
+.input_filter7:checked ~ .Catogram-Default .filter7 .name-filter {
+    font-weight: bold;
+}
+
+.label-arrow {
+    position: absolute;
+    left: 308px;
+    top: 881px;
+    cursor: pointer;
+}
+
+.label-right-arrow {
+    position: absolute;
+    left: 1082px;
+    top: 879px;
+    cursor: pointer;
+}
+
+.label-arrow0,
+.label-right-arrow0 {
+    opacity: 0.3;
+    cursor: default;
+}
+
+
+.label-arrow1:active,
+.label-arrow2:active,
+.label-arrow3:active,
+.label-arrow4:active,
+.label-right-arrow1:active,
+.label-right-arrow2:active,
+.label-right-arrow3:active,
+.label-right-arrow4:active {
+    transform: scale(1.5);
+    transition: 10ms;
+}
+
+.input_filter1:checked ~ .Catogram-Default .image-cat {
+    filter: grayscale(0%) sepia(0%) hue-rotate(0) invert(0%) brightness(1) contrast(1);
+}
+
+.input_filter2:checked ~ .Catogram-Default .image-cat,
+.filter2 .preview-cat {
+    filter: grayscale(100%) sepia(0%) hue-rotate(0) invert(0%) brightness(1) contrast(1);
+}
+
+.input_filter3:checked ~ .Catogram-Default .image-cat,
+.filter3 .preview-cat {
+    filter: grayscale(0%) sepia(70%) hue-rotate(0) invert(0%) brightness(1) contrast(1);
+}
+
+.input_filter4:checked ~ .Catogram-Default .image-cat,
+.filter4 .preview-cat {
+    filter: grayscale(0%) sepia(0%) hue-rotate(200deg) invert(0%) brightness(1) contrast(1);
+}
+
+.input_filter5:checked ~ .Catogram-Default .image-cat,
+.filter5 .preview-cat {
+    filter: grayscale(0%) sepia(0%) hue-rotate(0) invert(100%) brightness(1) contrast(1);
+}
+
+.input_filter6:checked ~ .Catogram-Default .image-cat,
+.filter6 .preview-cat {
+    filter: grayscale(0%) sepia(0%) hue-rotate(0) invert(0%) brightness(1.5) contrast(1.5);
+}
+
+.input_filter7:checked ~ .Catogram-Default .image-cat,
+.filter7 .preview-cat {
+    filter: grayscale(0%) sepia(0%) hue-rotate(280deg) invert(0%) brightness(1.5) contrast(1);
+}
+
+
+.input-flip:checked ~ .Catogram-Default .image-cat {
+    transform: scale(-1, 1);
+}
+
+.input_rotate1:checked ~ .Catogram-Default .icon-rotate,
+.input_rotate1:checked ~ .Catogram-Default .image-wrapper-rotate {
+    transform: rotate(90deg);
+}
+
+.input_rotate2:checked ~ .Catogram-Default .icon-rotate,
+.input_rotate2:checked ~ .Catogram-Default .image-wrapper-rotate {
+    transform: rotate(180deg);
+}
+
+.input_rotate3:checked ~ .Catogram-Default .icon-rotate,
+.input_rotate3:checked ~ .Catogram-Default .image-wrapper-rotate {
+    transform: rotate(270deg);
+}
+
+.input_rotate0:checked ~ .Catogram-Default .image-wrapper-rotate {
+    transform: rotate(0deg);
+}
+
+.input-fill:checked ~ .Catogram-Default .image-cat {
+    object-fit: contain;
+}
+
+
+.input_scale1:checked ~ .Catogram-Default .image-wrapper-scale {
+    transform: scale(1.3, 1.3);
+}
+
+.input_scale2:checked ~ .Catogram-Default .image-wrapper-scale {
+    transform: scale(1.6, 1.6);
+}
+
+.input_scale3:checked ~ .Catogram-Default .image-wrapper-scale {
+    transform: scale(1.9, 1.9);
+}
+
+.input-flip:checked ~ .Catogram-Default .icon-flip,
+.input-fill:checked ~ .Catogram-Default .icon-fill,
+.input_scale1:checked ~ .Catogram-Default .icon-scale,
+.input_scale2:checked ~ .Catogram-Default .icon-scale,
+.input_scale3:checked ~ .Catogram-Default .icon-scale,
+.input_rotate1:checked ~ .Catogram-Default .icon-rotate,
+.input_rotate2:checked ~ .Catogram-Default .icon-rotate,
+.input_rotate3:checked ~ .Catogram-Default .icon-rotate {
+    fill: url(#gradient);
+    opacity: 1;
+}
+
+
+.input_scale1:checked ~ .Catogram-Default .icon-scale {
+    transform: scale(1.1, 1.1);
+}
+
+.input_scale2:checked ~ .Catogram-Default .icon-scale {
+    transform: scale(1.2, 1.2);
+}
+
+.input_scale3:checked ~ .Catogram-Default .icon-scale {
+    transform: scale(1.3, 1.3);
+}
+
+.icon-logo {
+    fill: url(#gradient);
+}
+
+.input-logo:checked ~ .Catogram-Default .icon-logo {
+    fill: var(--greyish-brown);
+    opacity: 0.8;
+}
+
+.input-logo:checked ~ .Catogram-Default .image-cat {
+    filter: none;
+    transform: scale(1, 1);
+    object-fit: cover;
+}
+
+.input-logo:checked ~ .Catogram-Default .image-wrapper-rotate {
+    transform: rotate(0deg);
+}
+
+.input-logo:checked ~ .Catogram-Default .image-wrapper-scale {
+    transform: scale(1, 1);
+}
+
+.input-logo:checked ~ .Catogram-Default .label-fill,
+.input-logo:checked ~ .Catogram-Default .label-scale,
+.input-logo:checked ~ .Catogram-Default .label-rotate,
+.input-logo:checked ~ .Catogram-Default .label-flip,
+.input-logo:checked ~ .Catogram-Default .label-arrow,
+.input-logo:checked ~ .Catogram-Default .label-right-arrow,
+.input-logo:checked ~ .Catogram-Default .filters {
+    display: none;
+}

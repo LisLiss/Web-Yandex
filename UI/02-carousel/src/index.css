@@ -1,0 +1,351 @@
+:root {
+  --black-color-text: #002137;
+}
+
+body {
+  margin: 0;
+}
+
+.murHeader {
+  position: fixed;
+  color: var(--black-color-text);
+  font-family: "PT SansNarrow", sans-serif;
+  font-size: 32px;
+  width: 100%;
+  text-align: center;
+  background: white;
+  padding: 15px 0;
+  border-bottom: 1px lightgrey solid;
+  top: 0;
+  margin: 0 auto;
+  z-index: 5000;
+  left: 0;
+  height: 50px;
+}
+
+.murHeader:first-letter {
+  color: red;
+}
+
+.inputCarousel,
+.inputModal {
+  display: none;
+}
+
+.mainCats {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding-top: 100px;
+  margin-bottom: 20px;
+}
+
+.boxCat {
+  height: 400px;
+  width: 400px;
+  display: inline-block;
+  overflow: hidden;
+  transition: left 0.4s ease-out;
+  position: relative;
+  text-align: center;
+  padding-bottom: 50px;
+  margin: 20px;
+  opacity: .7;
+  z-index: 100;
+}
+
+
+.carouselCats {
+  width: 1600px;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 20px 0;
+  top: 100px;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+
+.carousel-1:checked ~ .carouselCats .cat-1,
+.carousel-2:checked ~ .carouselCats .cat-2,
+.carousel-3:checked ~ .carouselCats .cat-3,
+.carousel-4:checked ~ .carouselCats .cat-4,
+.carousel-5:checked ~ .carouselCats .cat-5,
+.carousel-6:checked ~ .carouselCats .cat-6,
+.carousel-7:checked ~ .carouselCats .cat-7,
+.carousel-8:checked ~ .carouselCats .cat-8,
+.carousel-9:checked ~ .carouselCats .cat-9,
+.carousel-10:checked ~ .carouselCats .cat-10 {
+  height: 500px;
+  width: 500px;
+  opacity: 1;
+  padding-bottom: 0;
+}
+
+.imgCat {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-1:checked ~ .carouselCats .boxCat {
+  left: 530px;
+}
+
+.carousel-2:checked ~ .carouselCats .boxCat {
+  left: 90px;
+}
+
+.carousel-3:checked ~ .carouselCats .boxCat {
+  left: -355px;
+}
+
+.carousel-4:checked ~ .carouselCats .boxCat {
+  left: -800px;
+}
+
+.carousel-5:checked ~ .carouselCats .boxCat {
+  left: -1245px;
+}
+
+.carousel-6:checked ~ .carouselCats .boxCat {
+  left: -1690px;
+}
+
+.carousel-7:checked ~ .carouselCats .boxCat {
+  left: -2135px;
+}
+
+.carousel-8:checked ~ .carouselCats .boxCat {
+  left: -2575px;
+}
+
+.carousel-9:checked ~ .carouselCats .boxCat {
+  left: -3020px;
+}
+
+.carousel-10:checked ~ .carouselCats .boxCat {
+  left: -3465px;
+}
+
+.nameCat {
+  font-size: 50px;
+  color: white;
+  display: none;
+  position: relative;
+  bottom: 320px;
+}
+
+.carousel-1:checked ~ .carouselCats .cat-1:hover .nameCat,
+.carousel-2:checked ~ .carouselCats .cat-2:hover .nameCat,
+.carousel-3:checked ~ .carouselCats .cat-3:hover .nameCat,
+.carousel-4:checked ~ .carouselCats .cat-4:hover .nameCat,
+.carousel-5:checked ~ .carouselCats .cat-5:hover .nameCat,
+.carousel-6:checked ~ .carouselCats .cat-6:hover .nameCat,
+.carousel-7:checked ~ .carouselCats .cat-7:hover .nameCat,
+.carousel-8:checked ~ .carouselCats .cat-8:hover .nameCat,
+.carousel-9:checked ~ .carouselCats .cat-9:hover .nameCat,
+.carousel-10:checked ~ .carouselCats .cat-10:hover .nameCat {
+  display: block;
+  cursor: default;
+}
+
+.carousel-1:checked ~ .carouselCats .cat-1:hover img,
+.carousel-2:checked ~ .carouselCats .cat-2:hover img,
+.carousel-3:checked ~ .carouselCats .cat-3:hover img,
+.carousel-4:checked ~ .carouselCats .cat-4:hover img,
+.carousel-5:checked ~ .carouselCats .cat-5:hover img,
+.carousel-6:checked ~ .carouselCats .cat-6:hover img,
+.carousel-7:checked ~ .carouselCats .cat-7:hover img,
+.carousel-8:checked ~ .carouselCats .cat-8:hover img,
+.carousel-9:checked ~ .carouselCats .cat-9:hover img,
+.carousel-10:checked ~ .carouselCats .cat-10:hover img {
+  opacity: .5;
+  transition: opacity 3ms ease-out;
+}
+
+.carousel-1:checked ~ .carouselCats .cat-1:hover,
+.carousel-2:checked ~ .carouselCats .cat-2:hover,
+.carousel-3:checked ~ .carouselCats .cat-3:hover,
+.carousel-4:checked ~ .carouselCats .cat-4:hover,
+.carousel-5:checked ~ .carouselCats .cat-5:hover,
+.carousel-6:checked ~ .carouselCats .cat-6:hover,
+.carousel-7:checked ~ .carouselCats .cat-7:hover,
+.carousel-8:checked ~ .carouselCats .cat-8:hover,
+.carousel-9:checked ~ .carouselCats .cat-9:hover,
+.carousel-10:checked ~ .carouselCats .cat-10:hover {
+  background-color: black;
+}
+
+.footerLink {
+  color: #4c4cd8;
+  text-decoration: none;
+}
+
+.rightPart {
+  padding: 36px 10px 5px 0;
+  float: right;
+}
+
+.leftPart li {
+  list-style-type: none;
+}
+
+.leftPart {
+  bottom: 0;
+  padding: 0 0 5px 10px;
+  text-align: left;
+  float: left;
+}
+
+.content {
+  min-height: calc(100vh - 105px);
+  z-index: 100;
+}
+
+footer {
+  border-top: 1px lightgrey solid;
+  clear: both;
+  height: 85px;
+  z-index: 6000;
+  background: white;
+  position: relative;
+  width: 100%;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.modalWindow {
+  position: fixed;
+  display: none;
+  top: 0;
+  right: 0;
+  bottom: 40px;
+  left: 0;
+  padding: 20% 15%;
+  z-index: 4000;
+  font-size: 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0);
+}
+
+.card {
+  position: absolute;
+  height: 60%;
+  width: 70%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.modalImgCat {
+  height: 500px;
+  margin-right: 50px;
+  float: left;
+  object-fit: cover;
+  object-position: center;
+}
+
+.infoCat {
+  padding: 70px;
+  text-align: left;
+  z-index: 4000;
+  color: white;
+}
+
+.nameCatModal {
+  font-size: 40px;
+  margin: 30px;
+}
+
+.closeImg {
+  float: right;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.carousel-1:checked ~ .modal-1:not(:checked) ~ .carouselCats .modalWindow-1,
+.carousel-2:checked ~ .modal-2:not(:checked) ~ .carouselCats .modalWindow-2,
+.carousel-3:checked ~ .modal-3:not(:checked) ~ .carouselCats .modalWindow-3,
+.carousel-4:checked ~ .modal-4:not(:checked) ~ .carouselCats .modalWindow-4,
+.carousel-5:checked ~ .modal-5:not(:checked) ~ .carouselCats .modalWindow-5,
+.carousel-6:checked ~ .modal-6:not(:checked) ~ .carouselCats .modalWindow-6,
+.carousel-7:checked ~ .modal-7:not(:checked) ~ .carouselCats .modalWindow-7,
+.carousel-8:checked ~ .modal-8:not(:checked) ~ .carouselCats .modalWindow-8,
+.carousel-9:checked ~ .modal-9:not(:checked) ~ .carouselCats .modalWindow-9,
+.carousel-10:checked ~ .modal-10:not(:checked) ~ .carouselCats .modalWindow-10 {
+  display: block;
+  width: 0;
+  height: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.carousel-1:checked ~ .modal-1:not(:checked) ~ .carouselCats .modalWindow-1 > .card,
+.carousel-2:checked ~ .modal-2:not(:checked) ~ .carouselCats .modalWindow-2 > .card,
+.carousel-3:checked ~ .modal-3:not(:checked) ~ .carouselCats .modalWindow-3 > .card,
+.carousel-4:checked ~ .modal-4:not(:checked) ~ .carouselCats .modalWindow-4 > .card,
+.carousel-5:checked ~ .modal-5:not(:checked) ~ .carouselCats .modalWindow-5 > .card,
+.carousel-6:checked ~ .modal-6:not(:checked) ~ .carouselCats .modalWindow-6 > .card,
+.carousel-7:checked ~ .modal-7:not(:checked) ~ .carouselCats .modalWindow-7 > .card,
+.carousel-8:checked ~ .modal-8:not(:checked) ~ .carouselCats .modalWindow-8 > .card,
+.carousel-9:checked ~ .modal-9:not(:checked) ~ .carouselCats .modalWindow-9 > .card,
+.carousel-10:checked ~ .modal-10:not(:checked) ~ .carouselCats .modalWindow-10 > .card {
+  display: none;
+}
+
+.carousel-1:checked ~ .modal-1:checked ~ .carouselCats .modalWindow-1,
+.carousel-2:checked ~ .modal-2:checked ~ .carouselCats .modalWindow-2,
+.carousel-3:checked ~ .modal-3:checked ~ .carouselCats .modalWindow-3,
+.carousel-4:checked ~ .modal-4:checked ~ .carouselCats .modalWindow-4,
+.carousel-5:checked ~ .modal-5:checked ~ .carouselCats .modalWindow-5,
+.carousel-6:checked ~ .modal-6:checked ~ .carouselCats .modalWindow-6,
+.carousel-7:checked ~ .modal-7:checked ~ .carouselCats .modalWindow-7,
+.carousel-8:checked ~ .modal-8:checked ~ .carouselCats .modalWindow-8,
+.carousel-9:checked ~ .modal-9:checked ~ .carouselCats .modalWindow-9,
+.carousel-10:checked ~ .modal-10:checked ~ .carouselCats .modalWindow-10 {
+  display: block;
+  transition: background-color 1s;
+  background: rgba(0, 0, 0, .9);
+  opacity: 1;
+}
+
+.spanCarousel {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2000;
+}
+
+.spanModal {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2000;
+}
+
+.carousel-1:checked ~ .carouselCats .cat-1 .spanModal,
+.carousel-2:checked ~ .carouselCats .cat-2 .spanModal,
+.carousel-3:checked ~ .carouselCats .cat-3 .spanModal,
+.carousel-4:checked ~ .carouselCats .cat-4 .spanModal,
+.carousel-5:checked ~ .carouselCats .cat-5 .spanModal,
+.carousel-6:checked ~ .carouselCats .cat-6 .spanModal,
+.carousel-7:checked ~ .carouselCats .cat-7 .spanModal,
+.carousel-8:checked ~ .carouselCats .cat-8 .spanModal,
+.carousel-9:checked ~ .carouselCats .cat-9 .spanModal,
+.carousel-10:checked ~ .carouselCats .cat-10 .spanModal {
+  display: block;
+}
+
+.closeImg:hover {
+  cursor: pointer;
+}

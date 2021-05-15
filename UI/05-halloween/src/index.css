@@ -1,0 +1,222 @@
+:root {
+  --black-color-text: #002137;
+  --halloween-color: #f75f1c;
+  --light-a-halloween-color: rgba(255, 154, 0, 0.5);
+  --light-halloween-color: rgb(255, 154, 0);
+}
+
+html, body {
+  margin: 0;
+
+}
+
+.card-form {
+  display: grid;
+  grid-template-areas: "buttons-info colorTop"
+                 "form-buttons img"
+                 "form-buttons colorBottom";
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: 1fr 400px 1fr;
+  grid-gap: 10px;
+  width: 50%;
+  min-width: 600px;
+  margin: 40px auto 0 auto;
+  border: 5px dotted var(--halloween-color);
+  border-radius: 10px;
+  padding: 0 20px;
+  color: var(--black-color-text);
+}
+
+.imgCat {
+  grid-area: img;
+  width: 100%;
+  display: none;
+}
+
+.text-part {
+  grid-area: buttons-info;
+  font-family: "ALS Schlange sans", serif;
+}
+
+.color-bottom {
+  grid-area: colorBottom;
+}
+
+.color-top {
+  grid-area: colorTop;
+}
+
+.form-buttons {
+  grid-area: form-buttons;
+  font-family: "ALS Schlange sans", serif;
+  display: grid;
+  grid-template-rows: 400px 1fr;
+  grid-template-areas: "choice" "form-buttons__submit";
+  font-size: 25px;
+}
+
+.choice {
+  grid-area: choice;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.form-buttons__submit {
+  grid-area: form-buttons__submit;
+}
+
+.color {
+  width: 60%;
+  background-color: var(--halloween-color);
+  justify-self: center;
+}
+
+.text-part__header {
+  color: var(--black-color-text);
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+.text-part__info {
+  color: grey;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.radioButton,
+.checkButton {
+  display: none;
+}
+
+.buttons-radio {
+  display: flex;
+  justify-content: space-between;
+  color: #782604;
+}
+
+.buttons-radio__label {
+  width: 33%;
+  text-align: center;
+  background-color: var(--light-a-halloween-color);
+  padding: 10px 0;
+}
+
+.radio1 {
+  border-radius: 5px 0 0 5px;
+}
+
+.radio3 {
+  border-radius: 0 5px 5px 0;
+}
+
+.radioButton1:checked ~ .card-form .radio1,
+.radioButton2:checked ~ .card-form .radio2,
+.radioButton3:checked ~ .card-form .radio3 {
+  background-color: var(--halloween-color);
+}
+
+.buttons-info__costumeButton, .buttons-info__candyButton, .buttons-email__input, .submitButton {
+  font-size: 20px;
+  width: 100px;
+  border: none;
+  text-align: center;
+  background-color: rgba(255, 154, 0, 0.3);
+  color: #782604;
+  padding: 5px 0 7px 0;
+}
+
+.buttons-info__candyButton {
+  width: 50px;
+}
+
+.submitButton {
+  width: 250px;
+  font-size: 30px;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.form-buttons__submit {
+  text-align: center;
+}
+
+.buttons-email__input {
+  width: 99%;
+  text-align: left;
+  padding: 10px 0 10px 5px;
+  border-radius: 5px;
+}
+
+.buttons-info__costume {
+  padding-left: 5px;
+}
+
+.buttons-info__costumeButton:focus,
+.buttons-info__candyButton:focus,
+.buttons-email__input:focus,
+.submitButton:hover {
+  background-color: rgb(255, 154, 0);
+
+}
+
+.buttons-info__candyButton,
+.radio1,
+.radio2,
+.radio3,
+.submitButton,
+.checkButton,
+.darkSide,
+.buttons-info__candy {
+  cursor: pointer;
+}
+
+.darkSide:before {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--light-halloween-color);
+  border-radius: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 75%;
+  vertical-align: text-top;
+  margin-right: 5px;
+}
+
+.checkButton:checked ~ .card-form .darkSide::before {
+  background-image: url("resource/cat.png");
+  background-color: var(--light-halloween-color);
+}
+
+.checkButton:checked ~ .wrapper-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #141211;
+  z-index: -1;
+}
+
+.checkButton:checked ~ .card-form {
+  border-color: white;
+  color: white;
+}
+
+.checkButton:checked ~ .card-form .text-part__header,
+.checkButton:checked ~ .card-form .buttons-info__costumeButton,
+.checkButton:checked ~ .card-form .buttons-info__candyButton,
+.checkButton:checked ~ .card-form .buttons-email__input,
+.checkButton:checked ~ .card-form .buttons-radio__label,
+.checkButton:checked ~ .card-form .submitButton {
+  color: white;
+}
+
+.radioButton1:checked ~ .card-form .imgCat1,
+.radioButton2:checked ~ .card-form .imgCat2,
+.radioButton3:checked ~ .card-form .imgCat3 {
+  display: block;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MurTinder</title>
+  <link rel="stylesheet" href="./index.css">
+  <script src="index.js"></script>
+</head>
+<body>
+
+<header class="murHeader">МурТиндер <img class="imgHeader" src="resource/no_pig.png" alt="No pig">
+</header>
+<div class="boxCat cat-0">
+  <img class="imgCat img-0" src="resource/0.jpg" alt="End">
+</div>
+<div class="boxCat cat-1">
+  <img class="imgCat img-1" src="resource/1.jpg" alt="Попрыгун">
+  <p class="textCat">Попрыгун,<br>
+    1 год</p>
+</div>
+<div class="boxCat cat-2">
+  <img class="imgCat img-2" src="resource/2.jpg" alt="Компот">
+  <p class="textCat">Компот,<br>
+    10 лет</p>
+</div>
+<div class="boxCat cat-3">
+  <img class="imgCat img-3" src="resource/3.jpg" alt="Ватсон">
+  <p class="textCat">Ватсон,<br>
+    3 года</p>
+</div>
+<div class="boxCat cat-4">
+  <img class="imgCat img-4" src="resource/4.jpg" alt="Карамелька">
+  <p class="textCat">Карамелька,<br>
+    1 год</p>
+</div>
+<div class="boxCat cat-5">
+  <img class="imgCat img-5" src="resource/5.png" alt="Шерлок">
+  <p class="textCat">Шерлок,<br>
+    100 лет</p>
+</div>
+<div class="boxCat cat-6">
+  <img class="imgCat img-6" src="resource/6.jpg" alt="Коржик">
+  <p class="textCat">Коржик,<br>
+    1 год</p>
+</div>
+<div class="boxCat cat-7">
+  <img class="imgCat img-7" src="resource/7.jpg" alt="Васюндель">
+  <p class="textCat">Васюндель,<br>
+    5 лет</p>
+</div>
+<div class="boxCat cat-8">
+  <img class="imgCat img-8" src="resource/8.jpg" alt="Рузик">
+  <p class="textCat">Рузик,<br>
+    2 года</p>
+</div>
+<div class="boxCat cat-9">
+  <img class="imgCat img-9" src="resource/9.jpg" alt="Сыщик">
+  <p class="textCat">Сыщик,<br>
+    7 лет</p>
+</div>
+<div class="boxCat cat-10">
+  <img class="imgCat img-10" src="resource/10.jpg" alt="Мармеладка">
+  <p class="textCat">Мармеладка,<br>
+    5 лет</p>
+</div>
+<footer class="buttons">
+  <!-- div for shadows -->
+  <div class="divImgButton blueButton">
+    <img class="button dislike" src="resource/dislike.png" alt="no"
+         onclick="clickButton('black', 'no')">
+  </div>
+  <div class="divImgButton pinkButton">
+    <img class="button heart" src="resource/heart.png" alt="heart"
+         onclick="clickButton('#f9fa7f', 'heart')">
+  </div>
+  <div class="divImgButton blueButton">
+    <img class="button like" src="resource/like.png" alt="yes"
+         onclick="clickButton('#ff4f67', 'yes')">
+  </div>
+</footer>
+<script>
+  swipe();
+</script>
+</body>
+</html>

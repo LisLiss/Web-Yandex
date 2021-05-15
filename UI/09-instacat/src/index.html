@@ -1,0 +1,289 @@
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Задача «Котограм»</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<!-- sprite -->
+<svg class="hidden">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49 32" id="arrow">
+        <path d="M.5 7.401L24.428 31.33 48.357 7.4 41.569.613l-17.14 17.14L7.288.614z" fill-rule="evenodd"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="fill">
+        <path d="M8.395 8.395h30.996v30.996H8.395z"></path>
+        <path d="M35.946 0v5.166h6.888v6.673H48V0zM5.166 5.166h6.673V0H0v11.839h5.166zm37.668 37.668h-6.888V48H48V35.946h-5.166zM5.166 35.946H0V48h11.839v-5.166H5.166z"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 37" id="flip">
+        <path d="M0 29.9l19.084-11.788L0 6.325zm28.916-11.788L48 29.9V6.325L28.916 18.112zm15.058 4.425l-7.163-4.425 7.163-4.424v8.849zM21.398 8.05h5.205v5.175h-5.205zm0-8.05h5.205v5.175h-5.205zm0 16.1h5.205v5.175h-5.205zm0 7.475h5.205v5.175h-5.205zm0 8.05h5.205V36.8h-5.205z"></path>
+    </symbol>
+    <defs>
+        <linearGradient id="gradient" x1="101.5%" x2=".5%" y1="-.5%" y2="101.5%">
+            <stop offset="0%" stop-color="#8A2387"/>
+            <stop offset="63.677%" stop-color="#E94057"/>
+            <stop offset="100%" stop-color="#F27121"/>
+        </linearGradient>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="logo">
+            <path d="M0 0v48h48V0H0zm24.107 16.782a7.12 7.12 0 017.11 7.111 7.12 7.12 0 01-7.11 7.111 7.12 7.12 0 01-7.111-7.11 7.12 7.12 0 017.11-7.112zM6.4 5.547h7.253v4.693H6.4V5.547zM41.6 41.6H6.4V24.747h4.225c.443 7.053 6.318 12.657 13.482 12.657 7.163 0 13.039-5.604 13.481-12.657H41.6V41.6z"
+                  fill-rule="evenodd"></path>
+        </symbol>
+    </defs>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="rotate">
+        <path d="M24 48c13.234 0 24-9.765 24-21.753 0-11.99-10.766-21.749-24-21.749-.88 0-1.768.046-2.651.136V1.119c0-.452-.308-.863-.761-1.038a1.353 1.353 0 00-1.355.251l-8.504 7.722c-.484.438-.484 1.138 0 1.583l8.5 7.739a1.35 1.35 0 001.359.243c.453-.177.76-.585.76-1.035v-3.899c.88-.146 1.764-.212 2.651-.212 8.384 0 15.207 6.18 15.207 13.774 0 7.593-6.825 13.778-15.207 13.778-8.382 0-15.203-6.187-15.203-13.778 0-.616-.553-1.12-1.24-1.12H1.24c-.684 0-1.241.504-1.241 1.12C0 38.235 10.774 48 24 48z"
+              fill-rule="evenodd"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="scale">
+        <path d="M0 0v48h48V0H0zm6.4 6.4h33.682L6.4 40.227V6.4zm34.56 32.427H25.6v-6.4h15.36v6.4z"></path>
+        <path d="M24 13.071h-4.375v-4.5h-6.25v4.5H9V19.5h4.375V24h6.25v-4.5H24z"></path>
+    </symbol>
+</svg>
+<!-- end sprite -->
+
+<!-- inputs -->
+<input id="input-logo" class="input input-logo" type="checkbox">
+<input id="input-fill" class="input input-fill" type="checkbox">
+<input id="input-flip" class="input input-flip" type="checkbox">
+<!-- end inputs -->
+
+<!-- rotate inputs-->
+<input id="input-rotate0" class="input input_rotate0" type="radio" name="rotate" checked>
+<input id="input-rotate1" class="input input_rotate1" type="radio" name="rotate">
+<input id="input-rotate2" class="input input_rotate2" type="radio" name="rotate">
+<input id="input-rotate3" class="input input_rotate3" type="radio" name="rotate">
+<!-- end rotate inputs-->
+
+<!-- scale inputs-->
+<input id="input-scale0" class="input input_scale0" type="radio" name="scale" checked>
+<input id="input-scale1" class="input input_scale1" type="radio" name="scale">
+<input id="input-scale2" class="input input_scale2" type="radio" name="scale">
+<input id="input-scale3" class="input input_scale3" type="radio" name="scale">
+<!-- end scale inputs-->
+
+<!-- filter inputs-->
+<input id="input-filter1" class="input input_filter1" type="radio" name="filter" checked>
+<input id="input-filter2" class="input input_filter2" type="radio" name="filter">
+<input id="input-filter3" class="input input_filter3" type="radio" name="filter">
+<input id="input-filter4" class="input input_filter4" type="radio" name="filter">
+<input id="input-filter5" class="input input_filter5" type="radio" name="filter">
+<input id="input-filter6" class="input input_filter6" type="radio" name="filter">
+<input id="input-filter7" class="input input_filter7" type="radio" name="filter">
+<!-- end filter inputs-->
+
+<!--arrow inputs-->
+<input id="input-arrow1" class="input input_arrow1" type="radio" name="arrow" checked>
+<input id="input-arrow2" class="input input_arrow2" type="radio" name="arrow">
+<input id="input-arrow3" class="input input_arrow3" type="radio" name="arrow">
+<input id="input-arrow4" class="input input_arrow4" type="radio" name="arrow">
+<!-- end arrow inputs-->
+
+<div class="Catogram-Default">
+    <div class="controls">
+        <label class="label label-fill" for="input-fill">
+            <svg class="icon icon-fill">
+                <use xlink:href="#fill"></use>
+            </svg>
+        </label>
+
+        <label class="label label-scale label-scale0" for="input-scale0">
+            <svg class="icon icon-scale">
+                <use xlink:href="#scale"></use>
+            </svg>
+        </label>
+        <label class="label label-scale label-scale1" for="input-scale1">
+            <svg class="icon icon-scale">
+                <use xlink:href="#scale"></use>
+            </svg>
+        </label>
+        <label class="label label-scale label-scale2" for="input-scale2">
+            <svg class="icon icon-scale">
+                <use xlink:href="#scale"></use>
+            </svg>
+        </label>
+        <label class="label label-scale label-scale3" for="input-scale3">
+            <svg class="icon icon-scale">
+                <use xlink:href="#scale"></use>
+            </svg>
+        </label>
+
+        <label class="label label-logo" for="input-logo">
+            <svg class="icon icon-logo">
+                <use xlink:href="#logo"></use>
+            </svg>
+        </label>
+
+        <label class="label label-rotate label-rotate0" for="input-rotate0">
+            <svg class="icon icon-rotate">
+                <use xlink:href="#rotate"></use>
+            </svg>
+        </label>
+        <label class="label label-rotate label-rotate1" for="input-rotate1">
+            <svg class="icon icon-rotate">
+                <use xlink:href="#rotate"></use>
+            </svg>
+        </label>
+        <label class="label label-rotate label-rotate2" for="input-rotate2">
+            <svg class="icon icon-rotate">
+                <use xlink:href="#rotate"></use>
+            </svg>
+        </label>
+        <label class="label label-rotate label-rotate3" for="input-rotate3">
+            <svg class="icon icon-rotate">
+                <use xlink:href="#rotate"></use>
+            </svg>
+        </label>
+
+        <label class="label label-flip" for="input-flip">
+            <svg class="icon icon-flip">
+                <use xlink:href="#flip"></use>
+            </svg>
+        </label>
+    </div>
+    <div class="image-wrapper-rotate">
+        <div class="image-wrapper-scale">
+            <picture class="picture-cat">
+                <source srcset="resource/cat1.webp 1x, resource/cat2.webp 2x, resource/cat3.webp 3x"
+                        type="image/webp">
+                <img class="image-cat"
+                     src="resource/cat1.jpg"
+                     srcset="resource/cat2.jpg 2x, resource/cat3.jpg 3x"
+                     alt="cat's photo">
+            </picture>
+        </div>
+    </div>
+    <label class="label-arrow label-arrow0" for="input-arrow1">
+        <svg class="icon icon-arrow-left">
+            <use xlink:href="#arrow"></use>
+        </svg>
+    </label>
+    <label class="label-arrow label-arrow1" for="input-arrow1">
+        <svg class="icon icon-arrow-left">
+            <use xlink:href="#arrow"></use>
+        </svg>
+    </label>
+    <label class="label-arrow label-arrow2" for="input-arrow2">
+        <svg class="icon icon-arrow-left">
+            <use xlink:href="#arrow"></use>
+        </svg>
+    </label>
+    <label class="label-arrow label-arrow3" for="input-arrow3">
+        <svg class="icon icon-arrow-left">
+            <use xlink:href="#arrow"></use>
+        </svg>
+    </label>
+    <div class="filters">
+        <label class="filter filter1 visible1" for="input-filter1">
+            <span class="name-filter">
+                Без фильтра
+            </span>
+            <picture class="picture-preview-cat">
+                <source srcset="resource/preview1.webp 1x, resource/preview2.webp 2x, resource/preview3.webp 3x"
+                        type="image/webp">
+                <img class="preview-cat"
+                     src="resource/preview1.jpg"
+                     srcset="resource/preview2.jpg 2x, resource/preview3.jpg 3x"
+                     alt="filter preview">
+            </picture>
+        </label>
+        <label class="filter filter2 visible1 visible2" for="input-filter2">
+            <span class="name-filter">
+                Питер
+            </span>
+            <picture class="picture-preview-cat">
+                <source srcset="resource/preview1.webp 1x, resource/preview2.webp 2x, resource/preview3.webp 3x"
+                        type="image/webp">
+                <img class="preview-cat"
+                     src="resource/preview1.jpg"
+                     srcset="resource/preview2.jpg 2x, resource/preview3.jpg 3x"
+                     alt="filter preview">
+            </picture>
+        </label>
+        <label class="filter filter3 visible1 visible2 visible3" for="input-filter3">
+            <span class="name-filter">
+                Ялта
+            </span>
+            <picture class="picture-preview-cat">
+                <source srcset="resource/preview1.webp 1x, resource/preview2.webp 2x, resource/preview3.webp 3x"
+                        type="image/webp">
+                <img class="preview-cat"
+                     src="resource/preview1.jpg"
+                     srcset="resource/preview2.jpg 2x, resource/preview3.jpg 3x"
+                     alt="filter preview">
+            </picture>
+        </label>
+        <label class="filter filter4 visible1 visible2 visible3 visible4" for="input-filter4">
+            <span class="name-filter">
+                Уральское лето
+            </span>
+            <picture class="picture-preview-cat">
+                <source srcset="resource/preview1.webp 1x, resource/preview2.webp 2x, resource/preview3.webp 3x"
+                        type="image/webp">
+                <img class="preview-cat"
+                     src="resource/preview1.jpg"
+                     srcset="resource/preview2.jpg 2x, resource/preview3.jpg 3x"
+                     alt="filter preview">
+            </picture>
+        </label>
+        <label class="filter filter5 visible2 visible3 visible4" for="input-filter5">
+            <span class="name-filter">
+                Рентген
+            </span>
+            <picture class="picture-preview-cat">
+                <source srcset="resource/preview1.webp 1x, resource/preview2.webp 2x, resource/preview3.webp 3x"
+                        type="image/webp">
+                <img class="preview-cat"
+                     src="resource/preview1.jpg"
+                     srcset="resource/preview2.jpg 2x, resource/preview3.jpg 3x"
+                     alt="filter preview">
+            </picture>
+        </label>
+        <label class="filter filter6 visible3 visible4" for="input-filter6">
+            <span class="name-filter">
+                Солнце
+            </span>
+            <picture class="picture-preview-cat">
+                <source srcset="resource/preview1.webp 1x, resource/preview2.webp 2x, resource/preview3.webp 3x"
+                        type="image/webp">
+                <img class="preview-cat"
+                     src="resource/preview1.jpg"
+                     srcset="resource/preview2.jpg 2x, resource/preview3.jpg 3x"
+                     alt="filter preview">
+            </picture>
+        </label>
+        <label class="filter filter7 visible4" for="input-filter7">
+            <span class="name-filter">
+                Розовые очки
+            </span>
+            <picture class="picture-preview-cat">
+                <source srcset="resource/preview1.webp 1x, resource/preview2.webp 2x, resource/preview3.webp 3x"
+                        type="image/webp">
+                <img class="preview-cat"
+                     src="resource/preview1.jpg"
+                     srcset="resource/preview2.jpg 2x, resource/preview3.jpg 3x"
+                     alt="filter preview">
+            </picture>
+        </label>
+    </div>
+    <label class="label-right-arrow label-right-arrow2" for="input-arrow2">
+        <svg class="icon icon-arrow-right">
+            <use xlink:href="#arrow"></use>
+        </svg>
+    </label>
+    <label class="label-right-arrow label-right-arrow3" for="input-arrow3">
+        <svg class="icon icon-arrow-right">
+            <use xlink:href="#arrow"></use>
+        </svg>
+    </label>
+    <label class="label-right-arrow label-right-arrow4" for="input-arrow4">
+        <svg class="icon icon-arrow-right">
+            <use xlink:href="#arrow"></use>
+        </svg>
+    </label>
+    <label class="label-right-arrow label-right-arrow0" for="input-arrow4">
+        <svg class="icon icon-arrow-right">
+            <use xlink:href="#arrow"></use>
+        </svg>
+    </label>
+</div>
+
+</body>
+</html>

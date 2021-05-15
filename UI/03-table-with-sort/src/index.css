@@ -1,0 +1,249 @@
+:root {
+  --black-color-text: #002137;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-areas: "content" "footer";
+  margin: 0;
+  font: 16px "PT SansNarrow", sans-serif;
+}
+
+.murHeader {
+  position: fixed;
+  color: var(--black-color-text);
+  font-size: 32px;
+  width: 100%;
+  text-align: center;
+  background: white;
+  padding: 15px 0;
+  border-bottom: 1px lightgrey solid;
+  top: 0;
+  margin: 0 auto;
+  z-index: 5000;
+  left: 0;
+}
+
+.murHeader:first-letter {
+  color: red;
+}
+
+.allFooter {
+  border-top: 1px lightgrey solid;
+  padding: 5px 10px;
+  background: white;
+
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+  color: grey;
+  display: flex;
+  grid-area: footer;
+}
+
+.leftPart,
+.rightPart {
+  flex: 1;
+}
+
+.leftPart {
+  text-align: left;
+}
+
+.rightPart {
+  text-align: right;
+}
+
+.footerLink {
+  color: black;
+  text-decoration: none;
+}
+
+
+.content {
+  grid-area: content;
+}
+
+.breed {
+  display: none;
+}
+
+.mainCats {
+  margin: 90px 20px 0 20px;
+}
+
+.imgCat {
+  width: 300px;
+  height: 300px;
+}
+
+.boxCat {
+  border: 1px lightgrey solid;
+  border-radius: 5px;
+}
+
+.nameCat {
+  font-size: 20px;
+  margin: 0;
+}
+
+.infoCat, .fullInfoCat {
+  padding: 10px;
+}
+
+.allCats {
+  margin-right: 20px;
+}
+
+.filter {
+  color: grey;
+  display: none;
+}
+
+.filterName {
+  font-size: 20px;
+}
+
+.labelBreed {
+  display: block;
+  width: 80%;
+  margin: 10px 0;
+  border: 1px lightgrey solid;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+.labelBreed:hover {
+  box-shadow: 0 0 5px #4d8e53;
+}
+
+.boxCat:hover {
+  box-shadow: 0 0 5px grey;
+}
+
+.breed-all:checked ~ .mainCats .label-all,
+.breed-deer:checked ~ .mainCats .label-deer,
+.breed-street:checked ~ .mainCats .label-street,
+.breed-home:checked ~ .mainCats .label-home,
+.breed-vasya:checked ~ .mainCats .label-vasya,
+.breed-moustache:checked ~ .mainCats .label-moustache {
+  background-color: #3e7243;
+  color: white;
+}
+
+.filterSection {
+  margin: 15px;
+}
+
+.ageFilter {
+  -webkit-appearance: none;
+  background: #3e7243;
+  height: 2px;
+}
+
+@media (min-width: 1200px) {
+  .mainCats {
+    display: flex;
+  }
+
+  .allCats {
+    flex: 80;
+    display: grid;
+    grid-template: auto / 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .filter {
+    flex: 10;
+    display: block;
+  }
+
+  .boxCat {
+    grid-template-areas: "img info"
+                         "full full";
+    grid-template-columns: 320px auto;
+    grid-template-rows: 320px auto;
+    display: none;
+  }
+
+  .imgCat {
+    grid-area: img;
+    padding: 10px;
+  }
+
+  .infoCat {
+    grid-area: info;
+  }
+
+  .fullInfoCat {
+    grid-area: full;
+    border-top: 1px lightgrey solid;
+  }
+
+  .breed-all:checked ~ .mainCats .boxCat,
+  .breed-vasya:checked ~ .mainCats .vasya,
+  .breed-street:checked ~ .mainCats .street,
+  .breed-home:checked ~ .mainCats .home,
+  .breed-deer:checked ~ .mainCats .deer,
+  .breed-moustache:checked ~ .mainCats .moustache {
+    display: grid;
+  }
+
+  .footerText-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1199px) {
+  .footerText-desktop {
+    display: none;
+  }
+
+  .allCats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .boxCat {
+    width: 300px;
+    margin: 5px;
+  }
+
+  .fullInfoCat {
+    display: none;
+  }
+
+}
+
+@media (min-width: 730px) and (max-width: 1199px) {
+  .rightPart {
+    width: 100%;
+    padding-top: 35px;
+  }
+}
+
+@media (max-width: 729px) {
+  .allCats {
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .allFooter {
+    flex-direction: column;
+  }
+
+  .rightPart {
+    text-align: left;
+  }
+}

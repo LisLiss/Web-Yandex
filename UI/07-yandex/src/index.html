@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Яндекс</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body class="body">
+<input type="checkbox" id="setting" class="inputs checkbox-setting">
+<input type="checkbox" id="visited" class="inputs checkbox-visited" checked>
+<input type="checkbox" id="anecdotes" class="inputs checkbox-anecdotes" checked>
+<input type="checkbox" id="program" class="inputs checkbox-program" checked>
+<input type="checkbox" id="news" class="inputs checkbox-news" checked>
+<input type="checkbox" id="weather" class="inputs checkbox-weather" checked>
+<input type="checkbox" id="jams" class="inputs checkbox-jams" checked>
+<input type="checkbox" id="map" class="inputs checkbox-map" checked>
+<input type="checkbox" id="poster" class="inputs checkbox-poster" checked>
+<main class="main">
+  <header class="header">
+    <a class="header-city href-hover-red"
+       href="https://ru.wikipedia.org/wiki/%D0%9B%D0%BE%D0%BD%D0%B4%D0%BE%D0%BD">
+      <div class="header-city__logo"></div>
+      <!-- span for wrapping (div тоже)-->
+      <span class="header-city__name href-hover-red">Лондон</span>
+    </a>
+    <div class="header-setting">
+      <label class="header-setting__name href-hover-red" for="setting">Настройка</label>
+      <div class="header-setting__empty-triangle"></div>
+      <div class="header-setting-menu">
+        <ul class="header-setting-menu__ul">
+          <li class="header-setting-menu__li">
+            <label class="header-setting-menu__visited label-menu" for="visited">Посещаемое</label>
+          </li>
+          <li class="header-setting-menu__li">
+            <label class="header-setting-menu__anecdotes label-menu" for="anecdotes">Лучшие анекдоты</label>
+          </li>
+          <li class="header-setting-menu__li">
+            <label class="header-setting-menu__program label-menu" for="program">Телепрограмма</label>
+          </li>
+          <li class="header-setting-menu__li">
+            <label class="header-setting-menu__news label-menu" for="news">Автомобильные новости</label>
+          </li>
+          <li class="header-setting-menu__li">
+            <label class="header-setting-menu__weather label-menu" for="weather">Погода</label>
+          </li>
+          <li class="header-setting-menu__li">
+            <label class="header-setting-menu__jams label-menu" for="jams">Пробки</label>
+          </li>
+          <li class="header-setting-menu__li">
+            <label class="header-setting-menu__map label-menu" for="map">Карта</label>
+          </li>
+          <li class="header-setting-menu__li">
+            <label class="header-setting-menu__poster label-menu" for="poster">Афиша</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    <div class="news">
+      <div class="news-header">
+        <a href="#" class="news-header__now-in-media href-without-underline href-hover-red">Сейчас в
+          СМИ</a>
+        <a href="#" class="news-header__city href-without-underline href-hover-red">в Лондоне</a>
+        <a href="#" class="news-header__date href-without-underline href-hover-red">13 ноября,
+          пятница 13:13</a>
+      </div>
+      <ul class="news-ul">
+        <li class="news-ul__text"><a href="#"
+                                     class="news-ul__link href-without-underline href-hover-red">В
+          Лондоне нашли похищенных котят</a></li>
+        <li class="news-ul__text"><a href="#"
+                                     class="news-ul__link href-without-underline href-hover-red">Шерлок
+          Холмс раскрыл новое преступление</a></li>
+        <li class="news-ul__text"><a href="#"
+                                     class="news-ul__link href-without-underline href-hover-red">Биг
+          Бэн пробил 12 часов</a></li>
+        <li class="news-ul__text"><a href="#"
+                                     class="news-ul__link href-without-underline href-hover-red">Королева
+          Елизавета 2 вновь привела в дом кота</a></li>
+        <li class="news-ul__text"><a href="#"
+                                     class="news-ul__link href-without-underline href-hover-red">Под
+          Лондоном построили новый приют для диких рысей</a></li>
+      </ul>
+      <p class="news-money">
+        <!-- spans for wrapping -->
+        <span class="news-money__name">USD ЦБ</span>
+        <span class="news-money__cost">100,00</span>
+        <span class="news-money__percent">+10,00</span>
+        <span class="news-money__name">EUR ЦБ</span>
+        <span class="news-money__cost">200,00</span>
+        <span class="news-money__percent">+20,00</span>
+        <span class="news-money__name">НЕФТЬ</span>
+        <span class="news-money__cost">300,00</span>
+        <span class="news-money__percent">+30,00</span>
+      </p>
+    </div>
+    <div class="advert-small">
+      <img class="advert-small__img" src="resource/kupi_kota.jpg" alt="advert">
+      <a href="#" class="advert-small__header href-without-underline href-hover-red">Купи кота!</a>
+      <p class="advert-small__text">бесплатно и дорого</p>
+    </div>
+    <div class="yandex">
+      <img class="yandex__img" src="resource/yandex.svg" alt="Yandex">
+    </div>
+    <div class="search">
+      <div class="search-menu">
+        <a href="#" class="search-menu__name href-without-underline href-hover-red">Видео</a>
+        <a href="#" class="search-menu__name href-without-underline href-hover-red">Картинки</a>
+        <a href="#" class="search-menu__name href-without-underline href-hover-red">Новости</a>
+        <a href="#" class="search-menu__name href-without-underline href-hover-red">Карты</a>
+        <a href="#" class="search-menu__name href-without-underline href-hover-red">Маркет</a>
+        <a href="#" class="search-menu__name href-without-underline href-hover-red">Переводчик</a>
+        <a href="#" class="search-menu__name href-without-underline href-hover-red">Музыка</a>
+        <a href="#" class="search-menu__more href-without-underline href-hover-red">ещё</a>
+      </div>
+      <form class="search-form">
+        <div class="search-form__label">
+          <label>
+            <input class="search-form__input" type="text">
+          </label>
+          <a href="#" class="search-form__image search-form__mic">
+            <img src="resource/mic.svg" alt="mirco">
+          </a>
+          <a href="#" class="search-form__image search-form__keyboard">
+            <img src="resource/keyboard.svg" alt="keyboard">
+          </a>
+        </div>
+        <div class="search-form-button">
+          <button class="search-form-button__button">Найти</button>
+          <div class="search-form-button__corner"></div>
+        </div>
+      </form>
+      <div class="search__footer">
+        <p>Найдётся всё. Например, <a class="search__link href-without-underline href-hover-red"
+                                      href="#">кот</a></p>
+      </div>
+    </div>
+    <div class="banner">
+      <a href="https://kupikota.ru/"><img class="banner__img" src="resource/banner-small.jpg"
+                                          alt="banner"></a>
+    </div>
+
+
+    <div class="widget">
+      <div class="widget-first-column">
+        <div class="widget-visited widget-one">
+          <h3 class="widget__header">Посещаемое</h3>
+          <ul class="widget-visited__ul">
+            <!-- spans for wrapping -->
+            <li class="widget-visited__li">
+              <span class="widget-visited__li-bold">Маркет</span> - китайская распродажа
+            </li>
+            <li class="widget-visited__li">
+              <span class="widget-visited__li-bold">Авто</span> - японское
+            </li>
+            <li class="widget-visited__li">
+              <span class="widget-visited__li-bold">Дом</span> - кирпичный, как у Нуф-Нуфа
+            </li>
+            <li class="widget-visited__li">
+              <span class="widget-visited__li-bold">Работа</span> - не волк
+            </li>
+            <li class="widget-visited__li">
+              <span class="widget-visited__li-bold">Здоровье</span> - богатырское
+            </li>
+            <li class="widget-visited__li">
+              <span class="widget-visited__li-bold">Деньги</span> - евро
+            </li>
+            <li class="widget-visited__li">
+              <span class="widget-visited__li-bold">Авиабилеты</span> - в Лондон и обратно
+            </li>
+          </ul>
+        </div>
+        <div class="widget-anecdotes widget-one">
+          <h3 class="widget__header">Лучшие анекдоты</h3>
+          <div class="widget-anecdotes-block">
+            <input class="widget-anecdotes__input input-anecdote-1" id="anecdote-1" type="radio"
+                   name="anecdote" checked>
+            <input class="widget-anecdotes__input input-anecdote-2" id="anecdote-2" type="radio"
+                   name="anecdote">
+            <input class="widget-anecdotes__input input-anecdote-3" id="anecdote-3" type="radio"
+                   name="anecdote">
+            <input class="widget-anecdotes__input input-anecdote-4" id="anecdote-4" type="radio"
+                   name="anecdote">
+            <input class="widget-anecdotes__input input-anecdote-5" id="anecdote-5" type="radio"
+                   name="anecdote">
+            <p class="widget-anecdotes-block__anecdote anecdote-1">
+              Затеял мужик университету интернет-портал делать и нанял под это дело двух рабочих -
+              вроде нормальные, не пьют. Приезжает через две недели принимать работу, ходит - ну
+              просто круто всё сделано, не придерешься. Заходит в цдо, а там баллы по физре внезапно
+              порезаны! Он, естественно: это что такое?? А работяга ему: прикладной и довольно
+              рациональный подход. Неприятно
+            </p>
+            <p class="widget-anecdotes-block__anecdote anecdote-2">
+              Старик продаёт на базаре диффуры под табличкой «Один диффур — 3 рубля. Три диффура —
+              10 рублей».
+              Подходит Хала и покупает диффур за три рубля, потом ещё один диффур по три рубля,
+              потом ещё один диффур по три рубля и на прощанье радостно говорит Басову:
+              — Смотри, я купил три диффура, а заплатил только 9 рублей! Не умеешь торговать!
+              Басов смотрит ему вслед:
+              — Блин, чёт я не подумал, что кто-то больше одного осилит.
+            </p>
+            <p class="widget-anecdotes-block__anecdote anecdote-3">
+              Попадают три кота в кошачий приют. Первый — кот Виноградова, второй — Скакова, третий
+              — Басова. Дают им каждому по миске с «Китекэтом». Кот Виноградова вываливает миску на
+              пол, выкладывает непрерывную функцию, молится, съедает корм и тихонько ложится спать
+              довольный. Кот Скакова также высыпает корм, выкладывает из него байку про заводики,
+              долго что-то двигает, думает, меняет детали местами, наконец удовлетворенно съедает
+              всё и чинно ложится спать. Кот Басова высыпает еду на пол, напряженно смотрит на нее,
+              начинает неистово долбить корм миской, раздалбывает его в пыль, падает на спину и
+              колошматя лапами по полу в истерике орет: «Сволочи! Вы теряете время!!!»
+            </p>
+            <p class="widget-anecdotes-block__anecdote anecdote-4">
+              Орешников и Хала попали к каннибалам. - Мы дадим вам задания, - говорит их вождь, -
+              если вы их выполните, то мы вас не съедим. Сначала сходите на кафедру и принесите мне
+              10 ваших любимых заданий. Первым приходит Орешников и приносит 10 интегралов на метод
+              Остроградского. - Теперь ты должен их съесть. Выслушав вождя, он понял, что это
+              сложно, но ради жизни можно и потерпеть. Сидит, кушает свои интегралы, дошёл до
+              девятого, внезапно начал безумно смеяться, и аборигены его съели. Попал Орешников в
+              рай, тут у него ангелы и спрашивают: - Ты же нормально справлялся, почему ты
+              засмеялся?
+              - Да я увидел, как Хала десять диффуров несёт
+            </p>
+            <p class="widget-anecdotes-block__anecdote anecdote-5">
+              Едут в купе три девушки.
+              Одна говорит:
+              - Я люблю людей с техническим складом ума. Все по делают чётко, быстро,
+              сосредоточенно.
+              Вторая:
+              - А я люблю отзывчивых людей, которые с радостью делятся всем, что у них есть. Именно
+              от них получаешь настоящую любовь и ласку.
+              Третья:
+              - А я люблю, чтобы в постели был как лев. Чтобы рычал, царапался, кусался...
+              Тут поезд резко тормозит.
+              С верхней полки падает Лев Довжик:
+              -Такс ну вторую домашку я вам не зачитываю кстати вот ссылка на мой гитхаб
+            </p>
+            <label class="widget-anecdotes-block__label label-1" for="anecdote-1">
+              &#8635; Показать ещё
+            </label>
+            <label class="widget-anecdotes-block__label label-2" for="anecdote-2">
+              &#8635; Показать ещё
+            </label>
+            <label class="widget-anecdotes-block__label label-3" for="anecdote-3">
+              &#8635; Показать ещё
+            </label>
+            <label class="widget-anecdotes-block__label label-4" for="anecdote-4">
+              &#8635; Показать ещё
+            </label>
+            <label class="widget-anecdotes-block__label label-5" for="anecdote-5">
+              &#8635; Показать ещё
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="widget-second-column">
+        <div class="widget-program widget-one">
+          <h3 class="widget__header">Телепрограмма</h3>
+          <ul class="widget-program__ul">
+            <!-- spans for wrapping -->
+            <li class="widget-program__li">
+              15:00 Котик и клубок <span class="widget-program__li-grey">1 котячий</span>
+            </li>
+            <li class="widget-program__li">
+              15:10 Сказки для котов <span class="widget-program__li-grey">Сказочный</span>
+            </li>
+            <li class="widget-program__li">
+              15:10 Спокойной ночи, кот <span class="widget-program__li-grey">Детский-1</span>
+            </li>
+            <li class="widget-program__li">
+              15:30 Как украсть колбасу <span class="widget-program__li-grey">Лайфхаки</span>
+            </li>
+            <li class="widget-program__li">
+              15:30 Избавляемся от блох <span class="widget-program__li-grey">Здоровье</span>
+            </li>
+            <li class="widget-program__li">
+              15:50 Коты-инопланетяне <span class="widget-program__li-grey">РЕН-ТВ</span>
+            </li>
+          </ul>
+        </div>
+        <div class="widget-news widget-one">
+          <h3 class="widget__header">Автомобильные новости</h3>
+          <div class="widget-news-box">
+            <ul class="widget-news-box__ul">
+              <!-- spans for wrapping -->
+              <li class="widget-news-box__li">
+                Ехали медведи на велосипеде. <span class="widget-news-box__li-grey">12:00</span>
+              </li>
+              <li class="widget-news-box__li">
+                А за ними кот задом наперёд. <span class="widget-news-box__li-grey">13:00</span>
+              </li>
+              <li class="widget-news-box__li">
+                А за ним комарики на воздушном шарике. <span
+                class="widget-news-box__li-grey">14:00</span>
+              </li>
+              <li class="widget-news-box__li">
+                А за ними раки на хромой собаке. <span class="widget-news-box__li-grey">15:00</span>
+              </li>
+              <li class="widget-news-box__li">
+                Волки на кобыле. Львы в автомобиле. <span
+                class="widget-news-box__li-grey">16:00</span>
+              </li>
+              <li class="widget-news-box__li">
+                Зайчики в трамвайчике. <span class="widget-news-box__li-grey">17:00</span>
+              </li>
+              <li class="widget-news-box__li">
+                Жаба на метле... <span class="widget-news-box__li-grey">18:00</span>
+              </li>
+              <li class="widget-news-box__li">
+                Звери задрожали, в обморок упали.<span class="widget-news-box__li-grey">19:00</span>
+              </li>
+              <li class="widget-news-box__li">
+                Волки от испуга скушали друг друга.<span
+                class="widget-news-box__li-grey">20:00</span>
+              </li>
+              <li class="widget-news-box__li">
+                Бедный крокодил жабу проглотил.<span class="widget-news-box__li-grey">21:00</span>
+              </li>
+              <li class="widget-news-box__li">
+                А слониха, вся дрожа, так и села на ежа.<span
+                class="widget-news-box__li-grey">22:00</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="widget-third-column">
+        <div class="widget-weather widget-one">
+          <!-- spans for wrapping -->
+          <h3 class="widget__header">Погода <img src="resource/cloud.svg" alt="cloud"> <span
+            class="widget__header-black"> +3 &#8451; </span></h3>
+          <p class="widget-weather__text">Вечер -5, ночь -10</p>
+        </div>
+        <div class="widget-jams widget-one">
+          <h3 class="widget__header">Пробки <img src="resource/jam.svg" alt="red"> <span
+            class="widget__header-black"> 10 баллов </span></h3>
+          <p class="widget-jams__text">Сиди дома</p>
+        </div>
+        <div class="widget-map widget-one">
+          <h3 class="widget__header">Карта Лондона</h3>
+          <p class="widget-map__text">
+            <a href="#" class="widget-map__link href-without-underline href-hover-red">Такси</a>
+            <a href="#" class="widget-map__link href-without-underline href-hover-red">Кофе</a>
+            <a href="#" class="widget-map__link href-without-underline href-hover-red">Шерлок</a>
+          </p>
+        </div>
+        <div class="widget-poster widget-one">
+          <h3 class="widget__header">Афиша</h3>
+          <ul class="widget-poster__ul">
+            <li class="widget-poster__li">
+              <!-- spans for wrapping -->
+              Последний кот <span class="widget-poster__li-grey">приключения</span>
+            </li>
+            <li class="widget-poster__li">
+              Остаться в котах <span class="widget-poster__li-grey">фэнтези</span>
+            </li>
+            <li class="widget-poster__li">
+              Конек-коток <span class="widget-poster__li-grey">детские</span>
+            </li>
+            <li class="widget-poster__li">
+              Фиксики: большой котец <span class="widget-poster__li-grey">мультфильм</span>
+            </li>
+            <li class="widget-poster__li widget-poster-box__li-bold">
+              Концерты - BrainCat
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<aside class="aside">
+  <div class="header-mail">
+    <p class="header-mail__login">Cat</p>
+    <p class="header-mail__mail">Почта <span>111</span></p>
+  </div>
+</aside>
+</body>
+</html>
