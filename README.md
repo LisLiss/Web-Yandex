@@ -1,2 +1,2 @@
 # Web
-Homeworks for Web course from Yandex in Computer Science Center
+Homeworks for Web course by Yandex in Computer Science Center
